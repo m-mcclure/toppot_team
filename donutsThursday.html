@@ -2,8 +2,6 @@
 
 var downtown, capitolHill, sLU, wedgewood, ballard;
 
-
-
 function Location(shopName, openHr, closeHr, peopleNumLow, peopleNumHigh, percentEnter, avgDonutsOrdered) {
   this.shopName         = shopName;
   //shop hours must be entered using a 24-clock (integers only); this program currently cannot create sales estimates for shops that don't open and close "on the hour"
@@ -57,22 +55,9 @@ for(j=0; j < shopArray.length; j++) {
     dailyTotal += shopArray[j].hourlyDonutProjection();
   }
 
-  console.log(dailyTotal);
+  console.log("Daily totals for the " + shopArray[j].shopName + " location are: " +dailyTotal);
 
-}
-
-
-
-
-
-//logs to the console anticipated donut needs per hour by the hour for each shop
- /* for (j=0; j<5; j++) {
-  for (i=0; i < 11; i++) {
-    console.log("During business hour " + [i + 1] + ", the " + shopArray[j].shopName + " Top Pot location will need approximately " + (Math.ceil(shopArray[j].numPeopleThisHour()*shopArray[j].percentCalc()*shopArray[j].avgDonutsOrdered)) + " donuts.");
-  }
-  /* console.log("Projected daily total for the " + shopArray[j].shopName
-    + " location is " + ) */
- 
+} 
 
 </script>
 
