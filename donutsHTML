@@ -35,9 +35,11 @@
         <div id="avgDonutsOrdered">
           <p>Average Number of Donuts Ordered per Customer: <input  type="text" name="avgDonutsOrderedInput"></p>
         </div>
-
-
-      </section 
-
+      </section>
+      <section id="submitButtom">
+        <button type="button">Submit</button>
+      </section>
+      <section id="output">
+      </section>
     </body>
 </html>
