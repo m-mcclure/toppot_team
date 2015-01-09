@@ -1,7 +1,7 @@
 var userShopName, userOpenHours, userPeopleNumLow, userPeopleNumHigh, userPercentEnter, userAvgDonutsOrdered;
 var inputArray = []
 
-var dailyTotal = 0;
+
 
 function Location(shopName, openHours, peopleNumLow, peopleNumHigh, percentEnter, avgDonutsOrdered) {
     this.shopName         = shopName;
@@ -28,17 +28,21 @@ function Location(shopName, openHours, peopleNumLow, peopleNumHigh, percentEnter
       return (Math.ceil(this.numPeopleThisHour() * (this.percentCalc()) * this.avgDonutsOrdered));
     }
 
-    this.hourlyReport = function() {
-       
-    // Select the element and store it in a variable.
-    var elOutput = document.getElementById('output');
+    //this.hourlyReport = function() {
+      //var dailyTotal = 0;
+      //for (i=0; i < 11; i++) {
+      
+       //dailyTotal += this.hourlyDonutProjection();
+      // Select the element and store it in a variable.
+      //var elOutput = document.getElementById('output');
+      // Change the value of the class attribute.
+      //elOutput.innerHTML = ("<p>The " + this.shopName + " Top Pot location needs " + (this.hourlyDonutProjection()) + " donuts for hour " + i + " of the day.</p>");
 
-    // Change the value of the class attribute.
-    elOutput.innerHTML = ("<p>The " + this.shopName + " Top Pot location needs " + (this.hourlyDonutProjection()) + " donuts for hour " + "#" + " of the day.</p>");
+    //}
 
-    }
+  }
 
-}
+
 
   function buttonClick() {
 
@@ -65,8 +69,8 @@ function Location(shopName, openHours, peopleNumLow, peopleNumHigh, percentEnter
     userAvgDonutsOrdered = document.getElementById('avgDonutsOrderedInput').value="";
 
     var shopObject = new Location(inputArray[0], inputArray[1], inputArray[2], inputArray[3], inputArray[4], inputArray[5]);
-  
-    console.log(shopObject.hourlyReport());
+    var dailyTotal = 0;
+    //console.log(shopObject.hourlyReport());
 
     /*
     // Select the element and store it in a variable.
@@ -74,7 +78,14 @@ function Location(shopName, openHours, peopleNumLow, peopleNumHigh, percentEnter
 
     // Change the value of the class attribute.
     elOutput.innerHTML = '<p>' + inputArray + '</p>';*/
-
+    for (i = 0; i < inputArray[1]; i++) {
+      //shopObject.hourlyReport();
+      var elOutput = document.getElementById('output');
+      // Change the value of the class attribute.
+      elOutput.innerHTML = ("<p>The " + shopObject.shopName + " Top Pot location needs " + (shopObject.hourlyDonutProjection()) + " donuts for hour " + i + " of the day.</p>");
+      dailyTotal += shopObject.hourlyDonutProjection();
+    }
+    console.log(dailyTotal);
   }
 
 
