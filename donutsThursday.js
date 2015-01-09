@@ -33,7 +33,7 @@
     }
 
   }
-
+/*
   //create objects for Top Pot shops in 5 locations
   downtown    = new Location("Downtown",         11, 80,  220, 10, 4  );
   capitolHill = new Location("Capitol Hill",     11, 5,   45,  45, 2  );
@@ -41,7 +41,7 @@
   wedgewood   = new Location("Wedgewood",        11, 20,  60,  20, 1.5);
   ballard     = new Location("Ballard",          11, 25,  175, 35, 1  );
 
-  var shopArray = [downtown, capitolHill, sLU, wedgewood, ballard];
+  var shopArray = [downtown, capitolHill, sLU, wedgewood, ballard]; 
   var dailyTotal = 0;
 
   //var stringOutput = document.getElementById('output').append('55555555555');
@@ -58,8 +58,9 @@
     //document.write("Daily projected totals for the " + shopArray[j].shopName + " location: " +dailyTotal + " donuts\n");
    
   }
+  */
 
-//alert("yes");
+var inputArray = []
 
 function showAlert() {
 
@@ -70,11 +71,29 @@ function showAlert() {
   var userPercentEnter = document.getElementById('percentEnterInput').value;
   var userAvgDonutsOrdered = document.getElementById('avgDonutsOrderedInput').value;
 
-  console.log(userShopName);
-console.log(userOpenHours);
-console.log(userPeopleNumLow);
-console.log(userPeopleNumHigh);
-console.log(userAvgDonutsOrdered);
+  inputArray.push(userShopName, userOpenHours, userPeopleNumLow, userPeopleNumHigh, userPercentEnter, userAvgDonutsOrdered);
+  
+  console.log(inputArray[0]);
+  console.log(inputArray[1]);
+  console.log(inputArray[2]);
+  console.log(inputArray[3]);
+  console.log(inputArray[4]);
+  console.log(inputArray[5]);
+
+  userShopName = document.getElementById('shopNameInput').value="";
+  userOpenHours = document.getElementById('hoursOperatingInput').value="";
+  userPeopleNumLow = document.getElementById('hourlyFootTrafficMinInput').value="";
+  userPeopleNumHigh = document.getElementById('hourlyFootTrafficMaxInput').value="";
+  userPercentEnter = document.getElementById('percentEnterInput').value="";
+  userAvgDonutsOrdered = document.getElementById('avgDonutsOrderedInput').value="";
+
+  
+}
+
+function clear() {
+
+  
+
 }
 
 
