@@ -71,21 +71,30 @@ function Location(shopName, openHours, peopleNumLow, peopleNumHigh, percentEnter
     var shopObject = new Location(inputArray[0], inputArray[1], inputArray[2], inputArray[3], inputArray[4], inputArray[5]);
     var dailyTotal = 0;
     //console.log(shopObject.hourlyReport());
-
+   
     /*
     // Select the element and store it in a variable.
     var elOutput = document.getElementById('output');
 
     // Change the value of the class attribute.
     elOutput.innerHTML = '<p>' + inputArray + '</p>';*/
-    for (i = 0; i < inputArray[1]; i++) {
-      //shopObject.hourlyReport();
-      var elOutput = document.getElementById('output');
+    for (i = 0; i < 11; i++) {
+      //shopObject.hourlyReport();v
+      
+      var hourlySentenceTemp = ("The " + shopObject.shopName + " Top Pot location needs " + (shopObject.hourlyDonutProjection()) + " donuts for hour " + i + " of the day.");
+      var list = document.getElementById('outputList')
+      var newItemLast = document.createElement('li');
+      var newTextLast = document.createTextNode(hourlySentenceTemp);
+      newItemLast.appendChild(newTextLast);
+      list.appendChild(newItemLast);
+      //;
       // Change the value of the class attribute.
-      elOutput.innerHTML = ("<p>The " + shopObject.shopName + " Top Pot location needs " + (shopObject.hourlyDonutProjection()) + " donuts for hour " + i + " of the day.</p>");
+     // elOutput.appendChild() = ("<p>The " + shopObject.shopName + " Top Pot location needs " + (shopObject.hourlyDonutProjection()) + " donuts for hour " + i + " of the day.</p>");
       dailyTotal += shopObject.hourlyDonutProjection();
+      console.log(i);
     }
-    console.log(dailyTotal);
+    
+    //console.log(dailyTotal);
   }
 
 
