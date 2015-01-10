@@ -71,14 +71,14 @@ function Location(shopName, openHours, peopleNumLow, peopleNumHigh, percentEnter
     var shopObject = new Location(inputArray[0], inputArray[1], inputArray[2], inputArray[3], inputArray[4], inputArray[5]);
     var dailyTotal = 0;
     //console.log(shopObject.hourlyReport());
-   
+    var blue = inputArray[1];
     /*
     // Select the element and store it in a variable.
     var elOutput = document.getElementById('output');
 
     // Change the value of the class attribute.
     elOutput.innerHTML = '<p>' + inputArray + '</p>';*/
-    for (i = 0; i < 11; i++) {
+    for (i = 0; i < blue; i++) {
       //shopObject.hourlyReport();v
       
       var hourlySentenceTemp = ("The " + shopObject.shopName + " Top Pot location needs " + (shopObject.hourlyDonutProjection()) + " donuts for hour " + i + " of the day.");
@@ -93,7 +93,7 @@ function Location(shopName, openHours, peopleNumLow, peopleNumHigh, percentEnter
       dailyTotal += shopObject.hourlyDonutProjection();
       console.log(i);
     }
-    
+
     //console.log(dailyTotal);
   }
 
