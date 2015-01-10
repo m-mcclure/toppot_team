@@ -33,7 +33,7 @@ function buttonClick() {
   userPercentEnter     = document.getElementById('percentEnterInput').value;
   userAvgDonutsOrdered = document.getElementById('avgDonutsOrderedInput').value;
 
-  inputArray.push(userShopName, userOpenHours, userPeopleNumLow, userPeopleNumHigh, userPercentEnter, userAvgDonutsOrdered);
+  inputArray = [userShopName, userOpenHours, userPeopleNumLow, userPeopleNumHigh, userPercentEnter, userAvgDonutsOrdered];
 
   userShopName         = document.getElementById('shopNameInput').value="";
   userOpenHours        = document.getElementById('hoursOperatingInput').value="";
