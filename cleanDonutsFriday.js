@@ -56,7 +56,7 @@ function buttonClick() {
   
     dailyTotal += shopObject.hourlyDonutProjection(); 
   }
-  var dailySentenceTemp = ("The daily projected total for " + shopObject.shopName + " is: " + dailyTotal + "donuts!");
+  var dailySentenceTemp = ("The daily projected total for " + shopObject.shopName + " is: " + dailyTotal + " donuts!");
   var totalOfDay        = document.getElementById('outputList');
   var newItemLastTotal  = document.createElement('li');
   var newTextLastTotal  = document.createTextNode(dailySentenceTemp);
