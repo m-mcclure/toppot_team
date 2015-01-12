@@ -1,5 +1,5 @@
 var userShopName, userOpenHours, userPeopleNumLow, userPeopleNumHigh, userPercentEnter, userAvgDonutsOrdered;
-var inputArray = []
+var inputArray = [];
 
 function Location(shopName, openHours, peopleNumLow, peopleNumHigh, percentEnter, avgDonutsOrdered) {
   this.shopName              = shopName;
