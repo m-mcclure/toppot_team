@@ -25,7 +25,7 @@ function Location(shopName, openHours, peopleNumLow, peopleNumHigh, percentEnter
 }
 
 function submitIt() {
-  inputArray = []
+  inputArray = [];
   userShopName         = document.getElementById('shopNameInput').value;
   userOpenHours        = document.getElementById('hoursOperatingInput').value;
   userPeopleNumLow     = document.getElementById('hourlyFootTrafficMinInput').value;
