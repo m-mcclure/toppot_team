@@ -24,7 +24,7 @@ function Location(shopName, openHours, peopleNumLow, peopleNumHigh, percentEnter
   }
 }
 
-function buttonClick() {
+function submitIt() {
   inputArray = []
   userShopName         = document.getElementById('shopNameInput').value;
   userOpenHours        = document.getElementById('hoursOperatingInput').value;
@@ -64,3 +64,6 @@ function buttonClick() {
   list.appendChild(newItemLastTotal);
   console.log(dailyTotal);
 }
+
+var elSubmit = document.getElementById("submitButtonClick");
+elSubmit.addEventListener("click", submitIt, false);
